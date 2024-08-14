@@ -1,0 +1,127 @@
+.container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 3rem 0;
+
+  background: var(--gray8);
+}
+
+.content {
+  width: 100%;
+  max-width: 1000px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.content form {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.content form input[type='text'] {
+  width: 100%;
+
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+
+  border: 2px solid var(--gray7);
+  color: var(--gray4);
+  background: var(--gray6);
+}
+
+.content form > button {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+
+  transition: .3s ease;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0 1rem;
+  border-radius: 0.3rem;
+
+  color: var(--white9);
+  background: var(--blue8);
+}
+.content form > button:not(:disabled):hover { background: var(--blue9); }
+.content form button:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.tasksContainer {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tasksHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tasksHeader p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tasksHeader p:first-child { color: var(--blue8); }
+.tasksHeader p:last-child { color: var(--purple8); }
+.tasksHeader p, span { font-size: 0.9rem; font-weight: 500; }
+
+.tasksHeader p span {
+  padding: 0.1rem 1rem;
+  border-radius: 1rem;
+
+  background: var(--gray6);
+}
+
+.tasksContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tasksContent > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  border: 2px solid var(--gray7);
+  background: var(--gray6);
+}
+.tasksContent div div {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.tasksContent div div input[type='radio'] {
+  margin-top: 0.3rem;
+
+  transition: .3s ease;
+}
+
+.tasksContent div button {
+  display: flex;
+
+  transition: .3s ease;
+
+  color: var(--gray4);
+  background: transparent;
+}
+.tasksContent div button:hover { color: var(--red9); }
+
+.lineThrough { text-decoration: line-through; color: var(--gray8); }

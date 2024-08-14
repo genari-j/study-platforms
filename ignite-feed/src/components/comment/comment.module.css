@@ -1,0 +1,87 @@
+.container {
+  width: 100%;
+
+  display: flex;
+  gap: 1rem;
+}
+
+/* .container > img {
+  width: 4rem;
+  height: 4rem;
+} */
+
+.content {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.content > div {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  background: var(--gray7);
+}
+
+.content header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.content header > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.content header > div span:first-child {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.content header > div time {
+  font-size: 0.9rem;
+  color: var(--gray5);
+}
+
+.content header > button {
+  display: flex;
+
+  transition: .3s ease;
+
+  color: var(--gray4);
+  background: transparent;
+}
+
+.content header > button:hover,
+.content header > button:focus { color: var(--red9); }
+
+.content > div > p { font-size: 0.9rem; }
+
+.content > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  transition: .3s ease;
+
+  font-size: 0.9rem;
+
+  color: var(--gray4);
+  background: transparent;
+}
+.content > button i {
+  display: flex;
+
+  font-size: 0.9rem;
+}
+.content > button:hover { color: var(--gray5); }
