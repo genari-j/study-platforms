@@ -15,6 +15,9 @@
 #### Ignite Timer
 - O Projeto consiste em uma aplicação estilo método pomodoro, onde podemos iniciar tarefas, acompanhar o timer na tela, interromper tarefas e acessar a listagem de todas as atividades que já foram iniciadas.
 
+#### Knex Fastify
+- O Projeto consiste em uma API com Fastify, Typescript, Prisma, ZOD, Cookies, Tests e mais;
+
 ##### Treinos: Todo List
 - O Projeto foi realizado apenas para colocar em prática os conceitos do que já foi estudado durante a trilha.
 
