@@ -1,0 +1,46 @@
+{
+	"name": "daily-diet-api",
+	"version": "1.0.0",
+	"description": "API criada para suportar parte dos treinos pela Rocketseat",
+	"main": "server.ts",
+	"engines": {
+		"node": "20"
+	},
+	"scripts": {
+		"dev": "tsx watch src/server.ts",
+		"lint": "npx @biomejs/biome check --write"
+	},
+	"prisma": {
+		"seed": "tsx prisma/seeds.ts"
+	},
+	"keywords": [
+		"API",
+		"Rest",
+		"Restful",
+		"Typescript",
+		"Backend",
+		"Node"
+	],
+	"author": "João Victor Genari",
+	"license": "ISC",
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.3",
+		"@types/bcryptjs": "^2.4.6",
+		"@types/jsonwebtoken": "^9.0.7",
+		"@types/node": "^22.7.4",
+		"@types/nodemailer": "^6.4.16",
+		"prisma": "^5.20.0",
+		"tsx": "^4.19.1",
+		"typescript": "^5.6.2"
+	},
+	"dependencies": {
+		"@fastify/cors": "^10.0.1",
+		"@prisma/client": "^5.20.0",
+		"bcryptjs": "^2.4.3",
+		"dotenv": "^16.4.5",
+		"fastify": "^5.0.0",
+		"jsonwebtoken": "^9.0.2",
+		"nodemailer": "^6.9.15",
+		"zod": "^3.23.8"
+	}
+}

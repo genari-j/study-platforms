@@ -18,6 +18,9 @@
 #### Knex Fastify
 - O Projeto consiste em uma API com Fastify, Typescript, Prisma, ZOD, Cookies, Tests e mais;
 
+#### Daily Diet
+- O Projeto consiste em uma API com Fastitify, Typescript, Prisma, ZOD, JWT e mais;
+
 ##### Treinos: Todo List
 - O Projeto foi realizado apenas para colocar em prática os conceitos do que já foi estudado durante a trilha.
 

@@ -1,0 +1,69 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Profile {
+  id          Int       @id @unique @default(autoincrement())
+  name        String    @unique
+  description String
+  active      Boolean   @default(true)
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @updatedAt
+  deleted_at  DateTime?
+  users       Users[]
+
+  @@map("profiles")
+}
+
+model Profile_permission {
+  id          Int       @id @unique @default(autoincrement())
+  code        String    @unique
+  description String
+  active      Boolean   @default(true)
+  profiles    String
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @updatedAt
+  deleted_at  DateTime?
+
+  @@map("profile_permissions")
+}
+
+model Users {
+  id            Int        @id @unique @default(autoincrement())
+  name          String
+  email         String     @unique
+  password      String
+  contact       String?
+  profile       Profile    @relation(fields: [profile_id], references: [id])
+  profile_id    Int
+  active        Boolean    @default(true)
+  avatar        String?
+  created_at    DateTime   @default(now())
+  updated_at    DateTime   @updatedAt
+  deleted_at    DateTime?
+
+  meals         Meal[]
+
+  @@map("users")
+}
+
+model Meal {
+  id          Int        @id @unique @default(autoincrement())
+  name        String
+  description String
+  date        DateTime
+  diet        Boolean    @default(true)
+  users       Users @relation(fields: [user_id], references: [id])
+  user_id     Int
+  active      Boolean    @default(true)
+  created_at  DateTime   @default(now())
+  updated_at  DateTime   @updatedAt
+  deleted_at  DateTime?
+
+  @@map("meals")
+}
